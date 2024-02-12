@@ -48,6 +48,26 @@ export class MainComponent {
     this.table = false;
   }
 
+  edit():void{
+    this.service.edit(this.client).subscribe(receive => {
+
+      //obtendo posição do cliente no vetor
+      let position = this.clients.findIndex(obj => {
+        return obj.id == receive.id
+      });
+
+      this.clients[position]=receive;
+
+      this.client = new Client();
+
+      this.btnRegister=true;
+      this.table =true;
+
+      alert('tabela atualizada!')
+      
+    });
+  }
+
   ngOnInit(){
     this.select();
   }

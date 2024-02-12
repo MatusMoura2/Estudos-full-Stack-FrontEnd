@@ -20,4 +20,9 @@ export class ClientService {
     return this.http.post<Client>(this.url,obj);
   }
 
+  edit(obj:Client):Observable<Client>{
+    return this.http.put<Client>(this.url,obj);
+  }
+  
+
 }
