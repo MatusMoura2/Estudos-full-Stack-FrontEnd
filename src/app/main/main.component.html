@@ -10,7 +10,7 @@
     <input type="button" value="Remover"   *ngIf="!btnRegister" class="btn btn-danger">
     <input type="button" value="Cancelar"  *ngIf="!btnRegister" class="btn btn-secondary">
 </form>
-
+<h1>{{client | json}}</h1>
 <table class="table">
     <thead>
         <tr>
@@ -31,5 +31,13 @@
             </th>
         </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+        <tr *ngFor="let c of clients; index as i">
+            <td>{{i+1}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.age}}</td>
+            <td>{{c.city}}</td>
+            <td><button class="btn btn-success">selecionar</button></td>
+        </tr>
+    </tbody>
 </table>

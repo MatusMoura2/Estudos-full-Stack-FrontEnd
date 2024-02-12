@@ -9,14 +9,20 @@ import { ClientService } from '../service/client.service';
 })
 export class MainComponent {
 
+  client = new Client();
+
   btnRegister:boolean = true;
 
   //JSON de clientes
-  clientes:Client[] = [];
+  clients:Client[] = [];
 
   constructor(private service:ClientService){}
 
   select():void{
-    this.service.select().subscribe(receber => this.clientes = receber);
+    this.service.select().subscribe(receber => this.clients = receber);
+  }
+
+  ngOnInit(){
+    this.select();
   }
 }
