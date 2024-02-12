@@ -7,7 +7,7 @@
 
     <input type="button" value="Cadastrar" *ngIf="btnRegister" class="btn btn-primary" (click)="register()">
     <input type="button" value="Alterar" *ngIf="!btnRegister" class="btn btn-warning"  (click)="edit()">
-    <input type="button" value="Remover" *ngIf="!btnRegister" class="btn btn-danger">
+    <input type="button" value="Remover" *ngIf="!btnRegister" class="btn btn-danger"   (click)="remove()">
     <input type="button" value="Cancelar" *ngIf="!btnRegister" class="btn btn-secondary">
 </form>
 <table class="table" *ngIf="table">

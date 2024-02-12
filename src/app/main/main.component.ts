@@ -67,6 +67,25 @@ export class MainComponent {
       
     });
   }
+  remove():void{
+    this.service.remove(this.client.id).subscribe(receive => {
+
+      //obtendo posição do cliente no vetor
+      let position = this.clients.findIndex(obj => {
+        return obj.id == this.client.id;
+      });
+
+      this.clients.splice(position,1);
+
+      this.client = new Client();
+
+      this.btnRegister=true;
+      this.table =true;
+
+      alert('cliente removido!')
+      
+    });
+  }
 
   ngOnInit(){
     this.select();
