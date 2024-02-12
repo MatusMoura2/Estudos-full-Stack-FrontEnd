@@ -87,6 +87,12 @@ export class MainComponent {
     });
   }
 
+  cancel():void{
+    this.client = new Client();
+    this.btnRegister = true;
+    this.table = true;
+  }
+
   ngOnInit(){
     this.select();
   }
