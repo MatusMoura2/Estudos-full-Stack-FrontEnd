@@ -1,17 +1,16 @@
 <form>
     <img src="assets/client.png" alt="Icone do cliente">
 
-    <input type="text"   placeholder="Nome"   class="form-control" name="name" [(ngModel)]="client.name">
-    <input type="number" placeholder="Idade"  class="form-control" name="age"  [(ngModel)]="client.age">
-    <input type="text"   placeholder="Cidade" class="form-control" name="city" [(ngModel)]="client.city"> 
+    <input type="text" placeholder="Nome" class="form-control" name="name" [(ngModel)]="client.name">
+    <input type="number" placeholder="Idade" class="form-control" name="age" [(ngModel)]="client.age">
+    <input type="text" placeholder="Cidade" class="form-control" name="city" [(ngModel)]="client.city">
 
-    <input type="button" value="Cadastrar" *ngIf="btnRegister" class="btn btn-primary">
-    <input type="button" value="Alterar"   *ngIf="!btnRegister" class="btn btn-warning">
-    <input type="button" value="Remover"   *ngIf="!btnRegister" class="btn btn-danger">
-    <input type="button" value="Cancelar"  *ngIf="!btnRegister" class="btn btn-secondary">
+    <input type="button" value="Cadastrar" *ngIf="btnRegister" class="btn btn-primary" (click)="register()">
+    <input type="button" value="Alterar" *ngIf="!btnRegister" class="btn btn-warning">
+    <input type="button" value="Remover" *ngIf="!btnRegister" class="btn btn-danger">
+    <input type="button" value="Cancelar" *ngIf="!btnRegister" class="btn btn-secondary">
 </form>
-<h1>{{client | json}}</h1>
-<table class="table">
+<table class="table" *ngIf="table">
     <thead>
         <tr>
             <th>
@@ -37,7 +36,7 @@
             <td>{{c.name}}</td>
             <td>{{c.age}}</td>
             <td>{{c.city}}</td>
-            <td><button class="btn btn-success">selecionar</button></td>
+            <td><button class="btn btn-success" (click)="selectClient(i)">selecionar</button></td>
         </tr>
     </tbody>
 </table>

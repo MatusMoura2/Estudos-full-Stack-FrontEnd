@@ -11,6 +11,8 @@ export class MainComponent {
 
   client = new Client();
 
+  table:boolean = true;
+
   btnRegister:boolean = true;
 
   //JSON de clientes
@@ -19,7 +21,31 @@ export class MainComponent {
   constructor(private service:ClientService){}
 
   select():void{
-    this.service.select().subscribe(receber => this.clients = receber);
+    this.service.select().subscribe(receive => this.clients = receive);
+  }
+
+  register():void{
+    this.service.register(this.client).subscribe(receive => {
+      //cadastrar cliente
+      this.clients.push(receive);
+
+      //Limpar formulario
+       this.client = new Client();
+
+
+       alert('Novo cliente cadastrado!')
+    
+    
+    } );
+  }
+
+  selectClient(position:number):void{
+
+    this.client = this.clients[position]
+
+    this.btnRegister = false;
+
+    this.table = false;
   }
 
   ngOnInit(){
