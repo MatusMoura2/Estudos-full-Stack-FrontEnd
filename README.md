@@ -1,27 +1,50 @@
-# ApiFront
+# Cadastro de Clientes - Frontend Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
+Este é um projeto de frontend desenvolvido em Angular para um sistema de cadastro de clientes. Ele se integra com uma API Java que fornece os dados necessários para o cadastro.
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, certifique-se de ter instalado em sua máquina:
 
-## Code scaffolding
+- Node.js
+- Angular CLI
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
 
-## Build
+1. Clone este repositório:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
 
-## Running unit tests
+2. Navegue até o diretório do projeto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   cd nome-do-repositorio
+   ```
 
-## Running end-to-end tests
+3. Instale as dependências do projeto:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   npm install
+   ```
 
-## Further help
+## Uso
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   ng serve
+   ```
+
+2. O aplicativo estará disponível em `http://localhost:4200/`. Abra este URL no seu navegador.
+
+3. Interaja com a interface para cadastrar clientes.
+
+## Contribuição
+
+Contribuições são bem-vindas! Para sugestões, por favor abra uma issue primeiro para discutir o que você gostaria de mudar.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](https://opensource.org/licenses/MIT)
